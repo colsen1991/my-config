@@ -45,5 +45,10 @@
     {
         "key": "alt+f7",
         "command": "editor.action.referenceSearch.trigger"
+    },
+    {
+        "key": "alt+j",
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
     }
 ]
