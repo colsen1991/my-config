@@ -3,8 +3,8 @@
 	email = colsen1991@gmail.com
 [core]
 	ignorecase = false
-    editor = vim
-    whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+    	editor = nano
+    	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
 [credential]
 	helper = cache --timeout=3600
 [apply]
@@ -16,15 +16,15 @@
 [rerere]
 	enabled = true
 [alias]
-    br = branch
+    	br = branch
 	st = status
 	co = checkout
-    rb = "!f() { git rebase HEAD~$1 -i; }; f"
+    	rb = "!f() { git rebase HEAD~$1 -i; }; f"
 	rbs	= "!f() { git stash && git rb $1 && git stash pop; }; f"
-    amend = !git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend
+    	amend = !git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend
 	amenda = !git add . && git amend
 	cl = clean
-	purr = pull --reabase
+	purr = pull --rebase
 	purrs = stash && pull --rebase && stash pop
 	confg = config --global
 	fetchall = fetch --all --verbose --prune
