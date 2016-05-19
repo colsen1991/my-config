@@ -50,5 +50,9 @@
         "key": "alt+j",
         "command": "editor.action.addSelectionToNextFindMatch",
         "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+shift+r",
+        "command": "npm-script.run"
     }
 ]
