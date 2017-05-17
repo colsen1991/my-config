@@ -1,31 +1,31 @@
 [user]
-	name = Christer Olsen
-	email = colsen1991@gmail.com
+        name = Christer Olsen
+        email = colsen1991@gmail.com
 [core]
-	ignorecase = false
-    	editor = nano
-    	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+        ignorecase = false
+        editor = nano
+        whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+        autocrlf = input
 [credential]
-	helper = cache --timeout=3600
+        helper = cache --timeout=3600
 [apply]
-	whitespace = fix
+        whitespace = fix
 [push]
-	default = upstream
+        default = upstream
 [pull]
-	default = current
+        default = current
 [rerere]
-	enabled = true
+        enabled = true
 [alias]
-    	br = branch
-	st = status
-	co = checkout
-    	rb = "!f() { git rebase HEAD~$1 -i; }; f"
-	rbs	= "!f() { git stash && git rb $1 && git stash pop; }; f"
-    	amend = !git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend
-	amenda = !git add . && git amend
-	cl = clean
-	purr = pull --rebase
-	purrs = stash && pull --rebase && stash pop
-	confg = config --global
-	fetchall = fetch --all --verbose --prune
-
+        br = branch
+        st = status
+        co = checkout
+        rb = "!f() { git rebase HEAD~$1 -i; }; f"
+        rbs     = "!f() { git stash && git rb $1 && git stash pop; }; f"
+        amend = !git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend
+        amenda = !git add . && git amend
+        purr = pull --rebase
+        purrs = !git stash && git pull --rebase && git stash pop
+        confg = config --global
+	confge = config --global --edit
+        fetchall = fetch --all --verbose --prune
